@@ -2,3 +2,9 @@
 name = "ld_preload"
 version = "0.1.0"
 authors = ["Mariell Hoversholm <proximyst@proximyst.com>"]
+description = "Easily use LD_PRELOAD in your Rust libraries."
+repository = "https://github.com/Proximyst/ld_preload"
+readme = "README.md"
+keywords = ["ld_preload", "preload"]
+categories = ["no-std"]
+license = "GPL-3.0-only"
