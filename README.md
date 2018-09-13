@@ -6,7 +6,7 @@ ld_preload is a library meant for easily creating LD_PRELOAD constructors and de
 
 In order to use the library, use the macros:
 
-```
+```rust
 #[macro_use]
 extern crate ld_preload;
 
