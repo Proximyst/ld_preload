@@ -1,0 +1,4 @@
+[package]
+name = "ld_preload"
+version = "0.1.0"
+authors = ["Mariell Hoversholm <proximyst@proximyst.com>"]
