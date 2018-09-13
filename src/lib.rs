@@ -1,5 +1,8 @@
 #![no_std]
 
+/// Creates a function with C's `__attribute__((constructor))` applied to it.
+///
+/// Under the hood it's just a section with `.init_array` and `.init_array_end` ASM sections.
 #[macro_export]
 macro_rules! ld_preload_init {
     ($block:block) => {
@@ -13,6 +16,9 @@ macro_rules! ld_preload_init {
     };
 }
 
+/// Creates a function with C's `__attribute__((destructor))` applied to it.
+///
+/// Under the hood it's just a section with `.fini_array` and `.fini_array_end` ASM sections.
 #[macro_export]
 macro_rules! ld_preload_deinit {
     ($block:block) => {
