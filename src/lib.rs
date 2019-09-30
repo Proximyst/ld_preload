@@ -1,6 +1,5 @@
-extern crate libc;
-
-use ::libc::{c_char, c_void};
+use libc::c_char;
+use std::ffi::c_void;
 
 #[link(name = "dl")]
 extern "C" {
