@@ -1,22 +1,19 @@
 # ld_preload
 
-ld_preload is a library meant for easily creating LD_PRELOAD constructors and destructors, like one would use `__attribute__((constructor))` and `__attribute((destructor))` for in CXX with GCC. This has only been tested to work with GNU/Linux.
+ld_preload is a library meant for easily creating LD_PRELOAD constructors and destructors, like one would use `__attribute__((constructor))` and `__attribute__((destructor))` for in CXX with GCC. This has only been tested to work with GNU/Linux.
 
 # Usage
 
 In order to use the library, use the macros:
 
 ```rust
-#[macro_use]
-extern crate ld_preload;
-
-ld_preload_init {
+ld_preload_init!({
     println!("Hello, Ferris!");
-}
+});
 
-ld_preload_deinit {
+ld_preload_deinit!({
     println!("Goodbye, Ferris!");
-}
+});
 ```
 
 Then you need to set `lib.crate-type` to `["cdylib"]` to compile it.
